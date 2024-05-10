@@ -6,5 +6,5 @@ WORKDIR /app
 
 RUN apk add --no-cache git make build-base libpcap-dev
 
-RUN go mod download
-RUN go build ./cmd/assembler
+RUN GOPROXY=https://goproxy.io go mod download
+RUN GOPROXY=https://goproxy.io go build ./cmd/assembler
