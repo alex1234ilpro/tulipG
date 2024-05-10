@@ -4,5 +4,5 @@ COPY . /app
 
 WORKDIR /app
 
-RUN go mod download
-RUN go build ./cmd/enricher
+RUN GOPROXY=https://goproxy.io go mod download
+RUN GOPROXY=https://goproxy.io go build ./cmd/enricher
